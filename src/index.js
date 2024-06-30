@@ -28,16 +28,16 @@ var Track = require('./core/track.js');
 var BlocklyDialogs = require('./core/lib-dialogs');
 var WorkspaceActions = require('./core/workspaceActions.js');
 
-// require('./generators/sparql/');
+require('./generators/sparql/');
 
-require('./blocks/logic.js');
-require('./generators/sparql/logic.js');
-require('./blocks/math.js');
-require('./generators/sparql/math.js');
+// require('./blocks/logic.js');
+// require('./generators/sparql/logic.js');
+// require('./blocks/math.js');
+// require('./generators/sparql/math.js');
 require('./blocks/text.js');
 require('./generators/sparql/text.js');
-require('./blocks/resources.js');
-require('./generators/sparql/resources.js');
+// require('./blocks/resources.js');
+// require('./generators/sparql/resources.js');
 require('./blocks/variables.js');
 require('./generators/sparql/variables.js');
 

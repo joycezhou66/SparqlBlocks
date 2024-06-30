@@ -17,9 +17,9 @@
  * @fileoverview SPARQL Math blocks for Blockly.
  * @author q.neutron@gmail.com (Quynh Neutron), miguel.ceriani@gmail.com (Miguel Ceriani)
  */
-'use strict';
+// 'use strict';
 
-var _ = require('underscore'),
+/* var _ = require('underscore'),
     Blockly = require('blockly'),
     Types = require('../core/types.js'),
     Blocks = require('../core/blocks.js'),
@@ -34,7 +34,7 @@ Blocks.block('sparql_math_number', {
    * Block for numeric value.
    * @this Blockly.Block
    */
-  init: function() {
+  /* init: function() {
     this.setHelpUrl(Blockly.Msg.MATH_NUMBER_HELPURL);
     this.setColour(HUE);
     this.appendDummyInput()
@@ -49,7 +49,7 @@ Blocks.block('sparql_math_arithmetic', {
    * Block for basic arithmetic operator.
    * @this Blockly.Block
    */
-  init: function() {
+ /* init: function() {
     var OPERATORS =
         [[Blockly.Msg.MATH_ADDITION_SYMBOL, 'ADD'],
          [Blockly.Msg.MATH_SUBTRACTION_SYMBOL, 'MINUS'],
@@ -84,7 +84,7 @@ Blocks.block('sparql_math_single', {
    * Block for advanced math operators with single operand.
    * @this Blockly.Block
    */
-  init: function() {
+  /* init: function() {
     var OPERATORS =
         [[Blockly.Msg.MATH_SINGLE_OP_ABSOLUTE, 'ABS'],
          ['-', 'NEG']];
@@ -113,7 +113,7 @@ Blocks.block('sparql_math_number_property', {
    * negative or if it is divisible by certain number.
    * @this Blockly.Block
    */
-  init: function() {
+  /* init: function() {
     var PROPERTIES =
         [[Blockly.Msg.MATH_IS_EVEN, 'EVEN'],
          [Blockly.Msg.MATH_IS_ODD, 'ODD'],
@@ -140,7 +140,7 @@ Blocks.block('sparql_math_number_property', {
    * @return {Element} XML storage element.
    * @this Blockly.Block
    */
-  mutationToDom: function() {
+ /*  mutationToDom: function() {
     var container = document.createElement('mutation');
     var divisorInput = (this.getFieldValue('PROPERTY') == 'DIVISIBLE_BY');
     container.setAttribute('divisor_input', divisorInput);
@@ -151,7 +151,7 @@ Blocks.block('sparql_math_number_property', {
    * @param {!Element} xmlElement XML storage element.
    * @this Blockly.Block
    */
-  domToMutation: function(xmlElement) {
+ /*  domToMutation: function(xmlElement) {
     var divisorInput = (xmlElement.getAttribute('divisor_input') == 'true');
     this.updateShape_(divisorInput);
   },
@@ -161,7 +161,7 @@ Blocks.block('sparql_math_number_property', {
    * @private
    * @this Blockly.Block
    */
-  updateShape_: function(divisorInput) {
+  /* updateShape_: function(divisorInput) {
     // Add or remove a Value Input.
     var inputExists = this.getInput('DIVISOR');
     if (divisorInput) {
@@ -180,7 +180,7 @@ Blocks.block('sparql_math_round', {
    * Block for rounding functions.
    * @this Blockly.Block
    */
-  init: function() {
+ /* init: function() {
     var OPERATORS =
         [[Blockly.Msg.MATH_ROUND_OPERATOR_ROUND, 'ROUND'],
          [Blockly.Msg.MATH_ROUND_OPERATOR_ROUNDUP, 'ROUNDUP'],
@@ -200,7 +200,7 @@ Blocks.block('sparql_math_modulo', {
    * Block for remainder of a division.
    * @this Blockly.Block
    */
-  init: function() {
+  /* init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.MATH_MODULO_TITLE,
       "args0": [
@@ -229,7 +229,7 @@ Blocks.block('sparql_math_constrain', {
    * Block for constraining a number between two limits.
    * @this Blockly.Block
    */
-  init: function() {
+  /* init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.MATH_CONSTRAIN_TITLE,
       "args0": [
@@ -263,7 +263,7 @@ Blocks.block('sparql_math_random_int', {
    * Block for random integer between [X] and [Y].
    * @this Blockly.Block
    */
-  init: function() {
+ /* init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.MATH_RANDOM_INT_TITLE,
       "args0": [
@@ -292,7 +292,7 @@ Blocks.block('sparql_math_random_float', {
    * Block for random fraction between 0 and 1.
    * @this Blockly.Block
    */
-  init: function() {
+ /* init: function() {
     this.setHelpUrl(Blockly.Msg.MATH_RANDOM_FLOAT_HELPURL);
     this.setColour(HUE);
     this.setOutput(true, 'NumberExpr');
@@ -300,4 +300,5 @@ Blocks.block('sparql_math_random_float', {
         .appendField(Blockly.Msg.MATH_RANDOM_FLOAT_TITLE_RANDOM);
     this.setTooltip(Blockly.Msg.MATH_RANDOM_FLOAT_TOOLTIP);
   }
-});
+}); 
+*/

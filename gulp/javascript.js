@@ -28,14 +28,14 @@ var browserifyEditorSetup = browserify({
 
 var processJs = function(pipe) {
   return pipe.transform('brfs')
-      .bundle()
-      .pipe(source('sparqlblocks.min.js'))
-      .pipe(buffer())
-      .pipe(sourcemaps.init({loadMaps: true}))
-      .pipe(uglify())
-      .on('error', gutil.log)
-      .pipe(sourcemaps.write('./'))
-      .pipe(gulp.dest('./dist/js/'));
+    .bundle()
+    .pipe(source('sparqlblocks.min.js'))
+    .pipe(buffer())
+    .pipe(sourcemaps.init({loadMaps: true}))
+    .pipe(uglify())
+    .on('error', gutil.log)
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./dist/js/'));
 }
 
 gulp.task('processJs', function () {
@@ -46,5 +46,5 @@ gulp.task('processJs-extlibs', function () {
   return processJs(browserifyEditorSetup.transform('exposify'));
 });
 
-gulp.task('makeJs', ['buildBlockly', 'processJs-extlibs']);
-gulp.task('makeJs-bundleAll', ['buildBlockly', 'processJs']);
+gulp.task('makeJs', gulp.series('buildBlockly', 'processJs-extlibs'));
+gulp.task('makeJs-bundleAll', gulp.series('buildBlockly', 'processJs'));
